@@ -1,0 +1,52 @@
+% !TEX root =  master.tex
+\section{Zieldefinition}
+Das Ziel dieser Arbeit ist es zum einen die Vorteile von Continuous Integration und Continuous Deployment aufzuzeigen und zum anderen verschiedenen Systeme für CI \& CD untereinander zu vergleichen. Das Aufzeigen der Vorteile wird dabei als Aufhänger genutzt um in das Thema einzuleiten. Der Praxisbezug wird durch das Problem der Abteilung hergestellt. Deren CI/CD Pipeline braucht mittlerweile mehr als 20 Minuten um einen Durchlauf abzuschließen. Aus diesem Grund haben Sie sich dazu entschlossen die Pipeline auf einen Cluster aufzuteilen, dabei übernehmen die einzelnen Knoten im Cluster spezialisierte Aufgaben. Ein Knoten kümmert sich zum Beispiel um die Unit-Tests und ein weiterer um Komponententests durchzuführen. Dadurch soll die Zeit für eine Durchlauf reduziert werden. Um diese Cluster aufzubauen gibt es viele Möglichkeiten von vielen Anbietern. Sowohl in der Cloud als auch On Premise. Da die Ressourcen der Abteilung beschränkt sind wollen sie natürlich die am Besten zu ihnen passende Lösung. Mit dieser Problemstellung wird sich diese Arbeit größtenteils beschäftigen. Am Ende der Arbeit soll eine Handlungsempfehlung für die Abteilung vorliegen an der sie sich orientieren kann.
+\section{Untersuchungsmethodik}
+Damit die Alternativen möglichst objektiv bewertet werden können soll eine AHP-Analyse(Analytic Hierarchy Process) durchgeführt werden. Dabei ist das Ziel möglichst viele Stakeholder an der Aufstellung des Kriterienkatalogs und der Gewichtung teilhaben zu lassen.
+\chapter{Einleitung} 
+\section{Motivation} 
+\section{Problemstellung} 
+\section{Zielsetzung} 
+\chapter{Theoretische Grundlagen} 
+Im folgenden Abschnitt werden die theoretischen Grundlagen geschaffen, die für das Verständnis dieser Arbeit relevant sind. Auf der technischen Seite werden sowohl Continuous Integration und Continuous Deployment als auch Versionsverwaltungssysteme erläutert. Ein Überblick über die Methodik der Arbeit wird mit der AHP-Analyse gegeben.
+\section{Analytic Hierarchy Process (AHP-Analyse)}
+Wie kann man rationale Entscheidungen in einer irrationalen Welt treffen? Man kann es nicht. Allerdings ist es möglich mithilfe von verschiedenen Analysemethoden der Entscheidungstheorie eine möglichst große Näherung an eine rationale Entscheidung zu erreichen. 
+\subsection{Einführung}
+Eine dieser Methoden ist die \ac{NWA}. Sie ist ein bewährtes Hilfsmittel in Wissenschaft und Wirtschaft, um Entscheidungen zu finden und Möglichkeiten zu bewerten. Indem das Problem fragmentiert wird, kann durch die Methodik der Nutzwertanalyse die vollständige Problematik erfasst werden, oder anders ausgedrückt: \enquote{Das Gesamtproblem, das es zu entscheiden gilt, wird in Teilprobleme zerlegt und diese, wenn erforderlich, wiederum in Teilprobleme}\autocite[S.1]{Kuehnapfel.2014}. Alle Facetten des Problems werden betrachtet und nicht vereinfacht oder abstrahiert. Somit umgeht man die menschliche Natur, die aufgrund einer möglichen Zeitersparnis ein komplexes Problem immer vereinfachen will. Das Vereinfachen führt allerdings zu einer erhöhten Fehlerquote und zum sofortigen Ausschluss von unkonventionellen Möglichkeiten aufgrund der Tendenz des Menschen zu Konstanz und Bewahrung\autocite[Vgl.][S.1]{Kuehnapfel.2014}. Im Gegensatz dazu gewährleistet die Nutzwertanalyse Objektivität und Chancengleichheit unter den verschiedenen Alternativen.\newline
+Die Rationalität der Methodik ergibt sich aus der Vorgehensweise bei der Bearbeitung einer Fragestellung. Die einzelnen Fragmente (Kriterien) der Fragestellung werden einzeln bewertet und entsprechend ihrer Relevanz am Gesamtproblem gewichtet.\autocite[Vgl.][S.10]{Kuehnapfel.2014} An der Auswahl der Kriterien und deren Gewichtung sollten möglichst viele Stackeholder beteiligt sein um die Einflussnahme einzelner Meinungen zu unterbinden.\\
+\\
+In den 1970er Jahren hat Thomas L. Saaty das Konzept der \ac{NWA} weiterentwickelt. Der \ac{AHP} ist wie die \ac{NWA} ein grundlegender Ansatz zur Entscheidungsfindung und wurde entworfen um sowohl rationale als auch intuitive Entscheidungen in die Auswahl von zuvor selektierten Alternativen einzubeziehen.\autocite[Vgl.][S.1]{Saaty.2012} Er heißt Analytischer Hierarchie Prozess weil er sowohl analytisch, hierarchisch als auch prozessorientiert arbeitet.\autocite{TUM.2015}
+\begin{itemize}
+	\item\texttt{analytisch:} Die Entscheidungsunterstützung erfolgt mathematisch und mittels Logik
+	\item\texttt{hierarchisch:} \enquote{Bei Nutzung des AHP sind die für die Erfüllung der Zielstellung genutzten Entscheidungskriterien einer hierarchischen Struktur unterworfen.}\autocite[S.314]{Hausladen.2016} 
+	\item\texttt{prozessorientiert:} Die Entscheidungsunterstützung erfolgt immer nach dem selben Prozess
+\end{itemize}
+
+Mithilfe von erreicht die AHP-Analyse ihre Komplexität. Anders als bei der Nutzwertanalyse werden die Kriterien und Alternativen paarweise verglichen und im Verhältnis zueinander betrachtet.
+\subsection{Ablauf des AHP}
+
+\subsection{Vergleich mit NWA}
+\section{Versionsverwaltungssysteme}
+In der heutigen Softwareentwicklung besteht ein Projekt aus vielen Quellcode-Dateien, die ständig neu erstellt und verändert werden. Um jegliche Veränderungen an dem Quellcode zu dokumentieren und nachvollziehen zu können, wird ein Versionskontrollsystem (Version Control System; VCS) genutzt.\autocite[Vgl.][S.6]{Baerisch.2005}  
+Dieses ermöglicht es dem Entwickler beispielsweise, Weiterentwicklungen durchzuführen, während parallel an der aktuellen Version Fehler behoben werden. Darüber hinaus erlaubt eine Versionsverwaltung dem Entwickler, Änderungen mit anderen zu teilen und Änderungen von verschiedenen Personen zusammenzuführen.\autocite[Vgl.][S.9]{Kleine.2012} \\
+Ein VCS bietet die Möglichkeit, Änderungen von Informationen beispielsweise an einem Quellcode zu organisieren und zu verwalten. \autocite[Vgl.][S.1]{Pilato.2009}
+Die wachsende Sammlung an Informationen dient als „Repository (Lager), Projektgeschichte, Kommunikationsmedium und Werkzeug zur Team- und Produktverwaltung“.\autocite[][S.1]{Loeliger.2010} In einer Versionsverwaltung lagern somit nicht nur die Quelldateien, sie dient auch als Kernstück für ein ganzes Entwicklungsprojekt. \\
+Zentrale Aufgaben der Versionsverwaltung sind der Zugriff auf historische Versionen der Dateien, Aufzeichnung der Änderungen in einem Log und die Entwicklung und Pflege eines Repository mit Inhalten. Die Aufbewahrung von älteren Versionen ist gerade in der Softwareentwicklung wichtig, da Software nach dem „Probierprinzip“\autocite[][S.9]{Versteegen.2003} entwickelt wird. Auf eine neue Entwicklung folgt ein anschließender Test. Es werden so lange Anpassungen durchgeführt und getestet, bis das optimale Ergebnis erreicht wurde.\autocite[Vgl.][S.9]{Versteegen.2003}
+Ein Tool zur Sourcecodeverwaltung ermöglicht zudem das Management von Änderungen und den Zugriff von mehreren Entwicklern am gleichen Projekt.\autocite[Vgl.][S.1]{Loeliger.2010} Dies fördert die kollaborative Zusammenarbeit an einem Projekt, da parallel unterschiedliche Entwicklungen von mehreren Personen getätigt werden können. Gerade bei der Arbeit in einem Team muss die Möglichkeit der parallelen Entwicklung gegeben sein, da sich sonst die Entwickler in ihrer Arbeit gegenseitig beeinträchtigen.
+\section{CI/CD}
+\chapter{Praktische Umsetzung}
+\section{Projektumfeld}
+\section{IST-Zustand}
+\section{Zieldefinition}
+\section{Kriterienkatalog}
+\section{Auswahl der Zieltechnologien}
+\section{Analyse}
+\subsection{Aufstellung des Zielsystems}
+\subsection{Gewichtung der Kriterien}
+\subsection{Gewichtung der Alternativen}
+\subsection{Berechnung der Gesamtgewichtung}
+\subsection{Bewertung der Alternativen}
+\section{Handlungsempfehlung}
+\chapter{Zusammenfassung}
+\section{Fazit} 
+\section{Kritische Reflexion}
