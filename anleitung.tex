@@ -184,7 +184,26 @@ Nachdem die Applikation gebaut ist kann sie getestet werden. Hierfür können ve
 Es wird der Input, die aufgerufene Aktion und das gewünschte Ergebnis beschrieben. Mit dieser Syntax lassen sich alle Testfälle beschreiben.\autocite[Vgl.][S.312]{Farley.2010}\\
 Sobald die Acceptance Tests erfolgreich durchgeführt sind endet die automatische Pipeline. Am Ende steht eine releasefähige Version der Applikation, welche ausreichend getestet und abgenommen wurde. Da die Pipeline bei jeder Veränderung ausgelöst wird hat man also immer ein aktuelle lauffähige Version die jederzeit präsentiert oder auch released werden kann. Dem Rollout auf das Produktivsystem steht jetzt hoffentlich nur noch ein Knopfdruck im Weg, wenn der Deploymentprozess entsprechend automatisiert ist. Wenn der Kunde oder das Management dann die Freigabe zum Release erteilt geht alles ganz schnell.\autocite[Vgl.][S.289]{Farley.2010}
 \subsection{Continuous Deployment}
+Continuous Deployment geht noch einen Schritt weiter und sagt:\enquote{Jede Veränderung soll direkt auf das Produktivsystem deployed werden}\autocite[Vgl.][S.17]{Stahl.2018} Damit automatisiert Continuous Deployment den letzten Schritt den Continuous Delivery als manuelle Tätigkeit übriglässt(Siehe Abbildung \ref{img:cde2}).
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale = 0.6]{img/CDE2.png}
+	\quelle{\cite[S.3]{Shahin.2017}}
+	\caption{Vergleich Continuous Delivery \& Continuous Deployment}
+	\label{img:cde2}
+\end{figure}\\
+ Wo Continuous Delivery immer einen Releasekandidaten in der Hand hat , welcher jederzeit released werden kann, geht Continuous Deployment diesen Schritt weiter und tut es.\autocite[Vgl.][S.17]{Stahl.2018} Bevor man allerdings diesen Schritt geht ist einiges zu beachten. Es sollte darauf geachtet werden, dass es während des Deploymentprozesses zu keinen Downtimes kommt und der Wechsel für den Nutzer praktisch nicht bemerkbar ist. Hierfür kann sich dem Blue-Green Deploymentansatz bedient werden.\autocite[Vgl.][S.407]{Farley.2010}
+\begin{figure}[h!]
+ 	\centering
+ 	\includegraphics[scale = 1]{img/blue.jpg}
+ 	\quelle{\cite[S.407]{Farley.2010}}
+ 	\caption{Blue-Green Deployment}
+ 	\label{img:blue}
+\end{figure}
+Bei diesem Ansatz werden zwei Versionen der gleichen Applikation nebeneinander betrieben. Die grüne Applikation (Siehe Abbildung \ref{img:blue}) stellt in diesem Beispiel die alte Version dar die zurzeit noch in Betrieb ist. Die blaue Applikation wird währenddessen parallel zur grünen hochgefahren und startbereit gemacht. Sobald die blaue einsatzbereit ist wird der Traffic von der grünen Applikation auf die blaue gelenkt. Am einfachsten funktioniert dies, wenn dem ganzen ein Router vorgeschaltet ist, welcher den Traffic lenken kann(Siehe Abbildung \ref{img:blue}).\autocite[Vgl.][S.407]{Farley.2010} Der Nutzer bekommt von dem Wechsel kaum etwas mit und die Applikation muss keine Downttime in Kauf nehmen. Außerdem kann im Fall eines Fehler, in der blauen Applikation, sofort wieder auf die grüne gewechselt werden. Einzig bei dem Wechsel der Datenbanken kann es zu Komplikationen kommen, da die Daten aus der grünen Applikation auf die Datenbank der blauen kopiert werden müssen.\autocite[Vgl.][S.407]{Farley.2010}\\  
+Für den gesamten Prozess des Continuous Deployments ist allerdings zu beachten, dass das Deployment nicht immer so einfach funktioniert. Ein großer Teil der heutzutage eingesetzten Software wird noch vom User selbst installiert und Veränderungen können nicht so einfach für alle released werden. Mit dem wachsenden Anteil von \enquote{X as a Service}-Angeboten\autocite[S.18]{Stahl.2018} sollte sich dies allerdings bald ändern\autocite[Vgl.][S.18]{Stahl.2018} Allgemein gesagt ist Continuous Deployment also die weitergeführt Idee von Continuous Delivery und hilft dabei den Prozess weiter zu beschleunigen.
 \subsection{DevOps}
+Der Begriff DevOps kommt in den letzten Jahren immer häufiger auf\autocite{Sauce.2018} und wird dabei auch häufig im Zusammenhang mit Continuous Integration, Continuous Delivery und Continuous Deployment genannt.
 \subsection{Testdriven Programming}  
 \chapter{Praktische Umsetzung}
 \section{Projektumfeld}
